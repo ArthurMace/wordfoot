@@ -6,48 +6,63 @@
 }
 
 body {
-  font-family: Arial, sans-serif;
-  background: linear-gradient(120deg, #004d00, #008000);
+  font-family: 'Arial', sans-serif;
+  background: #000;
   color: #fff;
-  text-align: center;
   min-height: 100vh;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
 }
 
 #container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  text-align: center;
+  width: 100%;
   height: 100%;
-  padding: 20px;
+  position: relative;
 }
 
 header h1 {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 3rem;
+  color: #fff;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+  margin-bottom: 30px;
+  position: relative;
+  z-index: 2;
 }
 
 #menu-principal button {
-  background: #004d00;
+  background: rgba(0, 0, 0, 0.7);
   color: #fff;
-  border: 2px solid #008000;
-  padding: 10px 20px;
+  border: 2px solid #00ff00;
+  padding: 15px 30px;
   font-size: 1.2rem;
   margin: 10px;
   cursor: pointer;
   border-radius: 5px;
   transition: all 0.3s ease;
+  z-index: 2;
+  position: relative;
 }
 
 #menu-principal button:hover {
-  background: #006600;
+  background: #00ff00;
+  color: #000;
   transform: scale(1.05);
 }
 
-footer {
-  margin-top: 20px;
-  font-size: 0.9rem;
+body::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  z-index: 1;
+  opacity: 0.7;
+  transition: background-image 1s ease-in-out;
 }
