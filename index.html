@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,16 +7,52 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div id="container">
-    <header>
-      <h1>WordFoot 2025</h1>
-    </header>
-    <main id="menu-principal">
-      <button onclick="novoJogo()">🎮 Novo Jogo</button>
-      <button onclick="jogosSalvos()">💾 Jogos Salvos</button>
-      <button onclick="configuracoes()">⚙️ Configurações</button>
-    </main>
+  <header>
+    <h1>WordFoot 2025</h1>
+  </header>
+
+  <main>
+    <div class="menu">
+      <button onclick="novoJogo()">Novo Jogo</button>
+      <button onclick="jogosSalvos()">Jogos Salvos</button>
+      <button onclick="configuracoes()">Configurações</button>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 WordFoot. Todos os direitos reservados.</p>
+  </footer>
+
+  <!-- Modal de Configurações -->
+  <div id="configuracoes" class="modal">
+    <div class="modal-content">
+      <h2>Configurações</h2>
+
+      <!-- Seção de Idioma -->
+      <label for="idioma">Idioma:</label>
+      <select id="idioma">
+        <option value="pt">Português</option>
+        <option value="en">Inglês</option>
+      </select>
+
+      <!-- Controle de Áudio -->
+      <label for="volume">Áudio:</label>
+      <input type="range" id="volume" min="0" max="100" step="1">
+      <span id="volume-label">50%</span>
+
+      <!-- Tempo de Partida -->
+      <label for="tempo-partida">Tempo de Partida:</label>
+      <select id="tempo-partida">
+        <option value="5">5 minutos</option>
+        <option value="10">10 minutos</option>
+        <option value="15">15 minutos</option>
+      </select>
+
+      <button onclick="salvarConfiguracoes()">Salvar</button>
+      <button onclick="fecharModal()">Fechar</button>
+    </div>
   </div>
+
   <script src="script.js"></script>
 </body>
 </html>
