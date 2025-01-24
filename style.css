@@ -1,17 +1,12 @@
-body {
-  font-family: Arial, sans-serif;
-  text-align: center;
-  background-color: #f3f3f3;
-  color: #333;
+// Funções da interface principal
+function mostrarElenco() {
+  alert("Tela de elenco em construção...");
 }
 
-#menu button {
-  margin: 10px;
-  padding: 10px 20px;
-  font-size: 16px;
-  cursor: pointer;
+function simularPartida() {
+  alert("Tela de simulação de partida em construção...");
 }
 
-#conteudo {
-  margin-top: 20px;
+function abrirMercado() {
+  alert("Tela do mercado de transferências em construção...");
 }
