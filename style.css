@@ -38,3 +38,15 @@ setInterval(trocarFundo, 10000);
 
 // Inicializa com a primeira imagem
 document.body.style.setProperty('--background-image', imagens[0]);
+.modal-content input[type="range"] {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.modal-content span {
+  display: inline-block;
+  margin-bottom: 20px;
+  font-size: 1rem;
+}
+
+
