@@ -66,3 +66,13 @@ body::after {
   opacity: 0.7;
   transition: background-image 1s ease-in-out;
 }
+.modal-content input[type="range"] {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.modal-content span {
+  display: inline-block;
+  margin-bottom: 20px;
+  font-size: 1rem;
+}
