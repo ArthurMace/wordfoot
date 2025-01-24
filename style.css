@@ -1,12 +1,40 @@
-// Funções da interface principal
-function mostrarElenco() {
-  alert("Tela de elenco em construção...");
+// Funções para os botões
+function novoJogo() {
+  alert("Novo Jogo em construção...");
 }
 
-function simularPartida() {
-  alert("Tela de simulação de partida em construção...");
+function jogosSalvos() {
+  alert("Tela de Jogos Salvos em construção...");
 }
 
-function abrirMercado() {
-  alert("Tela do mercado de transferências em construção...");
+function configuracoes() {
+  alert("Configurações em construção...");
 }
+
+// Imagens do fundo
+const imagens = [
+  'url("img/estadio1.jpg")',
+  'url("img/estadio2.jpg")',
+  'url("img/estadio3.jpg")',
+  'url("img/estadio4.jpg")',
+  'url("img/estadio5.jpg")',
+  'url("img/estadio6.jpg")',
+  'url("img/estadio7.jpg")',
+  'url("img/estadio8.jpg")',
+  'url("img/estadio9.jpg")',
+  'url("img/estadio10.jpg")',
+];
+
+let indiceAtual = 0;
+
+// Função para trocar o fundo
+function trocarFundo() {
+  document.body.style.setProperty('--background-image', imagens[indiceAtual]);
+  indiceAtual = (indiceAtual + 1) % imagens.length;
+}
+
+// Alterar o fundo a cada 10 segundos
+setInterval(trocarFundo, 10000);
+
+// Inicializa com a primeira imagem
+document.body.style.setProperty('--background-image', imagens[0]);
