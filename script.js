@@ -66,13 +66,33 @@ body::after {
   opacity: 0.7;
   transition: background-image 1s ease-in-out;
 }
-.modal-content input[type="range"] {
-  width: 100%;
-  margin-bottom: 10px;
+// Função para salvar as configurações no localStorage
+function salvarConfiguracoes() {
+  const idioma = document.getElementById('idioma').value;
+  const volume = volumeSlider.value;
+  const tempoPartida = document.getElementById('tempo-partida').value;
+
+  // Salvando no localStorage
+  localStorage.setItem('config_idioma', idioma);
+  localStorage.setItem('config_volume', volume);
+  localStorage.setItem('config_tempo_partida', tempoPartida);
+
+  alert('Configurações salvas com sucesso!');
+  fecharModal();
 }
 
-.modal-content span {
-  display: inline-block;
-  margin-bottom: 20px;
-  font-size: 1rem;
+// Função para carregar as configurações salvas
+function carregarConfiguracoes() {
+  const idioma = localStorage.getItem('config_idioma') || 'pt'; // Default: Português
+  const volume = localStorage.getItem('config_volume') || '50'; // Default: 50%
+  const tempoPartida = localStorage.getItem('config_tempo_partida') || '10'; // Default: 10 minutos
+
+  // Aplicar valores aos elementos
+  document.getElementById('idioma').value = idioma;
+  volumeSlider.value = volume;
+  volumeLabel.textContent = `${volume}%`;
+  document.getElementById('tempo-partida').value = tempoPartida;
 }
+
+// Carregar configurações ao carregar a página
+window.onload = carregarConfiguracoes;
